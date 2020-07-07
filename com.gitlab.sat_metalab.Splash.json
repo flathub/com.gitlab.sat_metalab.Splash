@@ -34,8 +34,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/opencv/opencv.git",
-                    "tag": "3.4.3",
-                    "commit": "b38c50b3d0c31e82294315ec44b54b7ef559ef12"
+                    "tag": "4.3.0",
+                    "commit": "01b2c5a77ca6dbef3baef24ebc0a5984579231d9"
                 }
             ]
         },
@@ -108,8 +108,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/sat-metalab/splash.git",
-                    "tag": "0.8.6",
-                    "commit": "11efabf7973b19eaefd8e2a4f51ff458746340ed"
+                    "tag": "0.8.8",
+                    "commit": "8d4c00e2d61bc0b83a01fff147bedee4ed0c29cc"
                 }
             ]
         }
