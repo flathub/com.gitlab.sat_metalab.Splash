@@ -100,7 +100,7 @@
             ],
             "build-commands": [
                 "./make_deps.sh",
-                "cmake -DBUILD_GENERIC_ARCH=ON -DCMAKE_INSTALL_PREFIX=/app .",
+                "cmake -DBUILD_GENERIC_ARCH=ON -DWITH_LTO=ON -DCMAKE_INSTALL_PREFIX=/app .",
                 "make -j$(if [[ -z ${FLATPAK_BUILD_N_JOBS} ]]; then echo $(nproc); else echo ${FLATPAK_BUILD_N_JOBS}; fi)",
                 "make install"
             ],
