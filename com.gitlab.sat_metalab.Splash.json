@@ -34,8 +34,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/opencv/opencv.git",
-                    "tag": "4.3.0",
-                    "commit": "01b2c5a77ca6dbef3baef24ebc0a5984579231d9"
+                    "tag": "4.5.0",
+                    "commit": "d5fd2f0155ffad366f9ac912dfd6d189a7a6a98e"
                 }
             ]
         },
@@ -87,8 +87,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/sat-metalab/shmdata.git",
-                    "tag": "1.3.32",
-                    "commit": "d1974625ca2404a3b6bd2bcef46edcb5986c82e5"
+                    "tag": "1.3.42",
+                    "commit": "c2bdc318ce9aa8dcbaad0fd15dab764114001d9d"
                 }
             ]
         },
@@ -108,8 +108,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/sat-metalab/splash.git",
-                    "tag": "0.8.30",
-                    "commit": "60906a3db3661c4f4f407093840d3ff00554cc7d"
+                    "tag": "0.8.32",
+                    "commit": "a8ae6d04aaaa9afa16b2899551a43abb86f85b3c"
                 }
             ]
         }
