@@ -108,8 +108,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/sat-metalab/splash.git",
-                    "tag": "0.9.4",
-                    "commit": "bf4a5b971a970bd1db106f4e8214cfe25bf15c56"
+                    "tag": "0.9.6",
+                    "commit": "33375eab33a7e983496855106939b3f961fcfcbc"
                 }
             ]
         }
