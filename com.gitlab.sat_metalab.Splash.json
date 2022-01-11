@@ -87,8 +87,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/sat-metalab/shmdata.git",
-                    "tag": "1.3.54",
-                    "commit": "88bf8c9d687dd3628f70c7d64645307b069b1c46"
+                    "tag": "1.3.62",
+                    "commit": "0a736370bcf855ebca83da6be3cd3d646e54994d"
                 }
             ]
         },
@@ -108,8 +108,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/sat-metalab/splash.git",
-                    "tag": "0.9.8",
-                    "commit": "fa2a845b8d3fd6f217f07997e0ac13cd438f62f0"
+                    "tag": "0.9.10",
+                    "commit": "786df17fa73e598097c5fbae0a519573ddfe108e"
                 }
             ]
         }
