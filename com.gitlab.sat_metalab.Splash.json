@@ -1,7 +1,7 @@
 {
     "app-id": "com.gitlab.sat_metalab.Splash",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "20.08",
+    "runtime-version": "22.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "splash",
     "rename-desktop-file": "splash.desktop",
@@ -34,8 +34,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/opencv/opencv.git",
-                    "tag": "4.5.0",
-                    "commit": "d5fd2f0155ffad366f9ac912dfd6d189a7a6a98e"
+                    "tag": "4.6.0",
+                    "commit": "b0dc474160e389b9c9045da5db49d03ae17c6a6b"
                 }
             ]
         },
@@ -87,8 +87,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/sat-metalab/shmdata.git",
-                    "tag": "1.3.62",
-                    "commit": "0a736370bcf855ebca83da6be3cd3d646e54994d"
+                    "tag": "1.3.68",
+                    "commit": "66513e5fef0a6fdad986455370a80f272f1745c2"
                 }
             ]
         },
@@ -108,8 +108,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/sat-metalab/splash.git",
-                    "tag": "0.9.20",
-                    "commit": "e1a0d4579b7f1901111e35119d3922b6b1468078"
+                    "tag": "0.9.22",
+                    "commit": "c56d2c82ecbb38d2a3240edb5db4b1e8180ef0ad"
                 }
             ]
         }
