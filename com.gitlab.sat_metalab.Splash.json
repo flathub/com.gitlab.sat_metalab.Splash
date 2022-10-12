@@ -17,7 +17,6 @@
         "/bin/gsl_*",
         "/bin/opencv_*",
         "/include",
-        "/lib/debug",
         "/share/OpenCV",
         "/share/info",
         "/share/man",
@@ -28,8 +27,13 @@
     "modules": [
         {
             "name": "opencv",
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "builddir": true,
+            "config-opts": [
+                "-DBUILD_PERF_TEST=OFF",
+                "-DBUILD_TESTS=OFF",
+                "-DBUILD_EXAMPLES=OFF"
+            ],
             "sources": [
                 {
                     "type": "git",
@@ -41,7 +45,7 @@
         },
         {
             "name": "portaudio",
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "sources": [
                 {
                     "type": "git",
@@ -67,7 +71,7 @@
         },
         {
             "name": "jsoncpp",
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "sources": [
                 {
                     "type": "git",
@@ -79,7 +83,7 @@
         },
         {
             "name": "shmdata",
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DWITH_PYTHON=OFF"
             ],
