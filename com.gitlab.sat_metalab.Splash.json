@@ -1,7 +1,7 @@
 {
     "app-id": "com.gitlab.sat_metalab.Splash",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "22.08",
+    "runtime-version": "21.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "splash",
     "rename-desktop-file": "splash.desktop",
@@ -86,7 +86,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://gitlab.com/sat-metalab/shmdata.git",
+                    "url": "https://gitlab.com/sat-mtl/tools/shmdata.git",
                     "tag": "1.3.68",
                     "commit": "66513e5fef0a6fdad986455370a80f272f1745c2"
                 }
@@ -95,11 +95,10 @@
         {
             "name": "splash",
             "buildsystem": "simple",
-            "config-opts": [
-                "-DBUILD_GENERIC_ARCH=ON"
-            ],
             "build-commands": [
-                "./make_deps.sh",
+                "git submodule update --init --recursive",
+                "mkdir -p external/third_parties",
+                "./external/build_zmq.sh",
                 "cmake -DBUILD_GENERIC_ARCH=ON -DWITH_LTO=ON -DCMAKE_INSTALL_PREFIX=/app .",
                 "make -j$(if [[ -z ${FLATPAK_BUILD_N_JOBS} ]]; then echo $(nproc); else echo ${FLATPAK_BUILD_N_JOBS}; fi)",
                 "make install"
@@ -107,9 +106,9 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://gitlab.com/sat-metalab/splash.git",
-                    "tag": "0.9.24",
-                    "commit": "985a99218e96c2a6580cd443e0c79f148a7a7076"
+                    "url": "https://gitlab.com/sat-mtl/tools/splash/splash.git",
+                    "tag": "0.9.26",
+                    "commit": "86298c68037d826db0e05767dcce3fd8d5ab3085"
                 }
             ]
         }
