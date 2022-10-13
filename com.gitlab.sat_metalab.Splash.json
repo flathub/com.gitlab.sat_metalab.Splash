@@ -97,15 +97,29 @@
             ]
         },
         {
+            "name": "zmq",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "config-opts": [
+                "-DWITH_LIBSODIUM=OFF",
+                "-DWITH_TLS=OFF",
+                "-DENABLE_WS=OFF"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/zeromq/libzmq.git",
+                    "tag": "v4.3.4",
+                    "commit": "4097855ddaaa65ed7b5e8cb86d143842a594eebd"
+                }
+            ]
+        },
+        {
             "name": "splash",
-            "buildsystem": "simple",
-            "build-commands": [
-                "git submodule update --init --recursive",
-                "mkdir -p external/third_parties",
-                "./external/build_zmq.sh",
-                "cmake -DBUILD_GENERIC_ARCH=ON -DWITH_LTO=ON -DCMAKE_INSTALL_PREFIX=/app .",
-                "make -j$(if [[ -z ${FLATPAK_BUILD_N_JOBS} ]]; then echo $(nproc); else echo ${FLATPAK_BUILD_N_JOBS}; fi)",
-                "make install"
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DBUILD_GENERIC_ARCH=ON",
+                "-DWITH_LTO=ON"
             ],
             "sources": [
                 {
