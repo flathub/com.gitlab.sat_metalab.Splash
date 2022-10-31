@@ -1,7 +1,7 @@
 {
     "app-id": "com.gitlab.sat_metalab.Splash",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "21.08",
+    "runtime-version": "22.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "splash",
     "rename-desktop-file": "splash.desktop",
@@ -125,8 +125,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/sat-mtl/tools/splash/splash.git",
-                    "tag": "0.9.26",
-                    "commit": "86298c68037d826db0e05767dcce3fd8d5ab3085"
+                    "tag": "0.9.28",
+                    "commit": "5715204110b9d8a2a5905155a695754511c8f0ac"
                 }
             ]
         }
