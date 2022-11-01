@@ -17,7 +17,6 @@
         "/bin/gsl_*",
         "/bin/opencv_*",
         "/include",
-        "/lib/debug",
         "/share/OpenCV",
         "/share/info",
         "/share/man",
@@ -28,8 +27,13 @@
     "modules": [
         {
             "name": "opencv",
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "builddir": true,
+            "config-opts": [
+                "-DBUILD_PERF_TEST=OFF",
+                "-DBUILD_TESTS=OFF",
+                "-DBUILD_EXAMPLES=OFF"
+            ],
             "sources": [
                 {
                     "type": "git",
@@ -41,7 +45,7 @@
         },
         {
             "name": "portaudio",
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "sources": [
                 {
                     "type": "git",
@@ -67,7 +71,7 @@
         },
         {
             "name": "jsoncpp",
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "sources": [
                 {
                     "type": "git",
@@ -79,37 +83,50 @@
         },
         {
             "name": "shmdata",
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DWITH_PYTHON=OFF"
             ],
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://gitlab.com/sat-metalab/shmdata.git",
+                    "url": "https://gitlab.com/sat-mtl/tools/shmdata.git",
                     "tag": "1.3.68",
                     "commit": "66513e5fef0a6fdad986455370a80f272f1745c2"
                 }
             ]
         },
         {
-            "name": "splash",
-            "buildsystem": "simple",
+            "name": "zmq",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
             "config-opts": [
-                "-DBUILD_GENERIC_ARCH=ON"
-            ],
-            "build-commands": [
-                "./make_deps.sh",
-                "cmake -DBUILD_GENERIC_ARCH=ON -DWITH_LTO=ON -DCMAKE_INSTALL_PREFIX=/app .",
-                "make -j$(if [[ -z ${FLATPAK_BUILD_N_JOBS} ]]; then echo $(nproc); else echo ${FLATPAK_BUILD_N_JOBS}; fi)",
-                "make install"
+                "-DWITH_LIBSODIUM=OFF",
+                "-DWITH_TLS=OFF",
+                "-DENABLE_WS=OFF"
             ],
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://gitlab.com/sat-metalab/splash.git",
-                    "tag": "0.9.24",
-                    "commit": "985a99218e96c2a6580cd443e0c79f148a7a7076"
+                    "url": "https://github.com/zeromq/libzmq.git",
+                    "tag": "v4.3.4",
+                    "commit": "4097855ddaaa65ed7b5e8cb86d143842a594eebd"
+                }
+            ]
+        },
+        {
+            "name": "splash",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DBUILD_GENERIC_ARCH=ON",
+                "-DWITH_LTO=ON"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.com/sat-mtl/tools/splash/splash.git",
+                    "tag": "0.9.28",
+                    "commit": "5715204110b9d8a2a5905155a695754511c8f0ac"
                 }
             ]
         }
