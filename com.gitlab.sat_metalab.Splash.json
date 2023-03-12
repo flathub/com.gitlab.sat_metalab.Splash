@@ -64,7 +64,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://mirror.sergal.org/gnu/gsl/gsl-2.5.tar.gz",
+                    "url": "https://mirror.ibcp.fr/pub/gnu/gsl/gsl-2.5.tar.gz",
                     "sha256": "0460ad7c2542caaddc6729762952d345374784100223995eb14d614861f2258d"
                 }
             ]
@@ -119,14 +119,14 @@
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DBUILD_GENERIC_ARCH=ON",
-                "-DWITH_LTO=ON"
+                "-DCMAKE_BUILD_TYPE=Debug"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://gitlab.com/sat-mtl/tools/splash/splash.git",
-                    "tag": "0.9.30",
-                    "commit": "59887458e5d76dc5ea829051c3e5275f440202da"
+                    "tag": "0.9.32",
+                    "commit": "2c8ca959fd5762c624a8532e0799db16e227c579"
                 }
             ]
         }
