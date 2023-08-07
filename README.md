@@ -1,6 +1,8 @@
 Splash Flathub repository
 =========================
 
+**NOTE**: this package is deprecated, use `xyz.splashmapper.Splash` instead.
+
 To build the package manually:
 
 ```bash
